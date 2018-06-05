@@ -1,67 +1,110 @@
-h1{
-    text-align: center;
-}
 body{
-    background-color: #6ac5ac;
-    font-family: sans-serif,'roboto';
-    font-size: 14px;
-    text-align: center;
+    background-color:#6AC5AC;
+    font-family:'ROBOTO',sans-serif
 }
+h1{
+    position:relative;
+     text-align: center;
+-webkit-animation-name:ex;
+-webkit-animation-duration:1s;
+animation-name : ex;
+animation-duration : 2s;
+    }
+    
+    @-webkit-keyframes ex{
+0%{left:-50px; top:0px; }
+25%{left:0px; top:0px;}
+}
+
+
 .container{
-    display: grid;
+    display:grid;
     grid-template-columns: auto auto auto auto;
-   
-    grid-gap: 22px 26px;
-    margin: 0 75px;
-    padding-left: 50px;
-    padding-right: 50px;
-   
-   
-}
-.item
-{
-   
-    border: 1px solid transparent;
+    grid-gap:20px 40px;
+    margin :0 100px;
+    height:20vh;
+    width:40vw;
+    }
+.item{
+    height:250px;
+    width: 250px;
+    border:1px solid transparent;
     background-color: white;
-    border-radius: 5px;
-    height: 30vh;
-    width: 15vw;
+    border-radius:5px;
     text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content:space-evenly;
+    box-shadow:1px 1px solid white;
+    transition-duration: 1s;
+    transition-delay:1ms;
+    transition-timing-function: ease;
 }
-.skill name{
-    font-family: 'Lato', sans-serif;
+img {
+    height: 80px;
+    width:102.78px;
 }
-.item.hover{
-    box-shadow: 4px 4x;
-}
-.item{
-    box-shadow: 2px 2px;
-}
-
-
-img{
-    height: 20vh;
-}
-@media only screen and (max-width: 1200px) {
-    .container {
-       grid-template-columns: auto auto auto;
-    }
-}
-@media only screen and (max-width: 768px) {
-    .container {
-       grid-template-columns: auto auto;
-    }
-}
-@media only screen and (max-width: 576px) {
-    .container {
-       grid-template-columns: auto auto;
-
-    }
-    .skill workup{
-        display: none;
+@media only screen and (min-width:1200px)
+{
+    .container{
+        grid-template-columns : auto auto auto auto;
     }
 
+img
+    {
+        height: 70px;
+        width: 70px;
+    }
+    .item{
+        height: 280px;
+        width: 280px;
+        
+    }
+}
+@media only screen and (max-width:992px)
+{
+    .container{
+        grid-template-columns : auto auto auto;
+    }
+}
+@media only screen and (max-width:768px)
+{
+    .container{
+        grid-template-columns : auto auto ;
+    }
+  
+    
+    img
+    {
+        height: 55px;
+        width: 55px;
+    }
+    .item{
+        height: 220px;
+        width: 220px;
+    }
+}
+@media only screen and (max-width:576px)
+{
+    .container{
+        grid-template-columns : auto ;
+     
+    }
+    
+    
+    img
+    {
+        height: 45px;
+        width: 45px;
+    }
+    .item{
+        height: 100px;
+        width: 100px;
+
+    }
+    .skillworkup{
+        display:none;
+    }
+.item:hover{
+    box-shadow:4px 4px #405751;
 }
